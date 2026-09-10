@@ -1,0 +1,8 @@
+{
+  "name": "Voyage Quest Website",
+  "description": "Multi-sector procurement, supply chain solutions, public works project management, and enterprise equipment partner across South Africa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
