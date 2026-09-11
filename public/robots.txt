@@ -1,0 +1,6 @@
+# Robots.txt for Voyage Quest
+User-agent: *
+Allow: /
+
+# Direct links to sitemap
+Sitemap: https://tech.voyagequest.co.za/sitemap.xml
