@@ -8,14 +8,11 @@ import {
   ShieldCheck, 
   CheckCircle2, 
   Building2, 
-  HelpCircle, 
   ChevronDown, 
-  ChevronUp,
-  FileText,
-  UserCheck
+  ChevronUp
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { COMPANY_PROFILE, SOUTH_AFRICAN_PROVINCES } from '../data/companyData';
+import { COMPANY_PROFILE } from '../data/companyData';
 
 export const ContactSection: React.FC = () => {
   const [name, setName] = useState('');
@@ -26,29 +23,25 @@ export const ContactSection: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [formError, setFormError] = useState('');
 
-  // FAQs
+  // FAQs tailored strictly to Procurement and Project Management
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const faqs = [
     {
-      q: "How does Voyage Quest support municipal tenders and formal RFQs?",
-      a: "We act as an agile, single-source partner providing itemized line-item pricing, compliant SABS/SANS certification sheets, and verified delivery schedules within 24 to 48 hours for local, district, and metropolitan municipal procurement requests."
+      q: "How do I request a quote for procurement supplies?",
+      a: "Simply complete the inquiry form above, or email your bill of quantities directly to info.voyagequest@gmail.com. You can also contact Yaaseen (073 465 6796) or Nabeel (071 331 0016). We provide itemized quotes within 24 to 48 hours."
     },
     {
-      q: "What is your scope for public employment and community works projects?",
-      a: "We offer end-to-end facilitation: workforce PPE outfitting conforming to SANS 434 and SANS 20345 standards, structured participant rostering to comply with ministerial determinations, accredited on-site training workshops, and daily muster roll reconciliation for audit compliance."
+      q: "What types of project management services do you provide?",
+      a: "We provide comprehensive on-the-ground management, including project scoping, resource scheduling, contractor management, on-site supervision, quality audits, and closeout reporting across both public and private sectors."
     },
     {
-      q: "Do you supply across all South African provinces?",
-      a: "Yes. Our logistics and delivery network covers all 9 provinces: Gauteng, Western Cape, KwaZulu-Natal, Eastern Cape, Limpopo, Mpumalanga, Free State, North West, and Northern Cape, with dedicated staging for regional sites."
+      q: "Do you deliver procurement orders nationwide?",
+      a: "Yes. Our logistics network services all 9 South African provinces: Western Cape, Gauteng, KwaZulu-Natal, Eastern Cape, Free State, Limpopo, Mpumalanga, North West, and Northern Cape."
     },
     {
-      q: "Can we consolidate janitorial, PPE, and enterprise IT under one contract?",
-      a: "Yes, this is our core advantage. Consolidating multi-sector supplies and project management through Voyage Quest reduces administrative overhead, minimizes multi-contractor conflicts, and yields competitive public value."
-    },
-    {
-      q: "How can our institution register Voyage Quest on our vendor database?",
-      a: "Simply email info@voyagequest.co.za with your vendor registration pack or supplier database portal link. Our compliance officers will furnish complete company documentation promptly."
+      q: "Are your safety equipment and PPE supplies SABS compliant?",
+      a: "Yes. All our protective workwear, safety boots, and equipment comply with relevant SABS and SANS industry standards, complete with requisite specification sheets."
     }
   ];
 
@@ -67,29 +60,29 @@ export const ContactSection: React.FC = () => {
     const body = encodeURIComponent(
       `From: ${name} (${email})\n` +
       `Organization: ${org || 'Not specified'}\n` +
-      `Subject: ${subject}\n\n` +
-      `Message:\n${message}\n`
+      `Inquiry Focus: ${subject}\n\n` +
+      `Message Details:\n${message}\n`
     );
     return `mailto:${COMPANY_PROFILE.email}?subject=${sub}&body=${body}`;
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-slate-50/50 border-b border-slate-200/80">
+    <section id="contact" className="py-20 lg:py-28 bg-black text-white border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200/80">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#161619] text-[#BF953F] text-xs font-semibold border border-[#BF953F]/30">
             <Mail className="w-3.5 h-3.5" />
-            <span>Procurement & Public Sector Desk</span>
+            <span>Direct Inquiries</span>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-slate-950 tracking-tight">
-            Connect with Voyage Quest
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            Connect With Voyage Quest
           </h2>
 
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-            Have a tender document, request for quote (RFQ), or supply consultation? Connect directly with our team in Cape Town or reach our key account managers.
+          <p className="text-zinc-300 text-base sm:text-lg leading-relaxed font-normal">
+            Whether you require a formal procurement quotation or a project management consultation, our leadership team is readily available.
           </p>
         </div>
 
@@ -97,49 +90,49 @@ export const ContactSection: React.FC = () => {
           
           {/* Left: Contact Credentials */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white rounded-3xl p-6 sm:p-8 space-y-6 shadow-xs border border-slate-200/90 dark:border-slate-800">
+            <div className="bg-[#0c0c0e] text-white rounded-3xl p-6 sm:p-8 space-y-6 border border-white/10 shadow-2xl">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#BF953F] block mb-1">
                   Republic of South Africa
                 </span>
-                <h3 className="font-display text-xl font-bold text-slate-950 dark:text-white">
-                  Head Office & Procurement Desk
+                <h3 className="font-serif text-xl font-bold text-white">
+                  Head Office &amp; Operations
                 </h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                  Voyage Quest • {COMPANY_PROFILE.legalType}
+                <p className="text-xs text-zinc-400 mt-0.5">
+                  Voyage Quest (Pty) Ltd
                 </p>
               </div>
 
               <div className="space-y-4 text-xs sm:text-sm">
                 
                 {/* Direct Phone Contacts */}
-                <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/80 space-y-3">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                    <Phone className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" /> Direct Key Account Contacts
+                <div className="p-4 rounded-2xl bg-[#141418] border border-white/10 space-y-3">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
+                    <Phone className="w-3.5 h-3.5 text-[#BF953F]" /> Direct Principals
                   </span>
                   
                   <div className="grid grid-cols-1 gap-2">
-                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/70 dark:border-slate-700">
+                    <div className="flex items-center justify-between p-3 rounded-xl bg-[#1a1a20] border border-white/5">
                       <div>
-                        <span className="font-semibold text-slate-900 dark:text-white block text-xs">Yaaseen</span>
-                        <span className="text-[11px] text-slate-500 dark:text-slate-400">Key Accounts & Procurement</span>
+                        <span className="font-bold text-white block text-xs">Yaaseen</span>
+                        <span className="text-[11px] text-zinc-400">Key Accounts &amp; Procurement</span>
                       </div>
                       <a 
                         href="tel:0734656796" 
-                        className="text-xs font-bold text-blue-700 dark:text-blue-400 hover:text-blue-800 bg-blue-50 dark:bg-blue-950/60 px-2.5 py-1 rounded-lg border border-blue-200/60 dark:border-blue-900/60 transition-colors"
+                        className="text-xs font-bold text-[#0a0a0c] hover:bg-[#d4af37] bg-[#BF953F] px-3 py-1.5 rounded-lg transition-colors"
                       >
                         073 465 6796
                       </a>
                     </div>
 
-                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/70 dark:border-slate-700">
+                    <div className="flex items-center justify-between p-3 rounded-xl bg-[#1a1a20] border border-white/5">
                       <div>
-                        <span className="font-semibold text-slate-900 dark:text-white block text-xs">Nabeel</span>
-                        <span className="text-[11px] text-slate-500 dark:text-slate-400">Operations & Logistics</span>
+                        <span className="font-bold text-white block text-xs">Nabeel</span>
+                        <span className="text-[11px] text-zinc-400">Projects &amp; Operations</span>
                       </div>
                       <a 
                         href="tel:0713310016" 
-                        className="text-xs font-bold text-blue-700 dark:text-blue-400 hover:text-blue-800 bg-blue-50 dark:bg-blue-950/60 px-2.5 py-1 rounded-lg border border-blue-200/60 dark:border-blue-900/60 transition-colors"
+                        className="text-xs font-bold text-[#0a0a0c] hover:bg-[#d4af37] bg-[#BF953F] px-3 py-1.5 rounded-lg transition-colors"
                       >
                         071 331 0016
                       </a>
@@ -149,14 +142,14 @@ export const ContactSection: React.FC = () => {
 
                 {/* Official Email */}
                 <div className="flex items-start gap-3 p-2">
-                  <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 border border-blue-100 dark:border-blue-900/40">
+                  <div className="w-10 h-10 rounded-xl bg-[#18181c] text-[#BF953F] flex items-center justify-center shrink-0 border border-white/10">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-slate-400 text-[11px] block">Official Email</span>
+                    <span className="text-zinc-400 text-[11px] block">Official Email</span>
                     <a 
                       href={`mailto:${COMPANY_PROFILE.email}`} 
-                      className="text-slate-900 dark:text-white hover:text-blue-600 font-semibold transition-colors text-xs sm:text-sm"
+                      className="text-white hover:text-[#BF953F] font-semibold transition-colors text-xs sm:text-sm"
                     >
                       {COMPANY_PROFILE.email}
                     </a>
@@ -165,15 +158,15 @@ export const ContactSection: React.FC = () => {
 
                 {/* Business Address */}
                 <div className="flex items-start gap-3 p-2">
-                  <div className="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700">
+                  <div className="w-10 h-10 rounded-xl bg-[#18181c] text-[#BF953F] flex items-center justify-center shrink-0 border border-white/10">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-slate-400 text-[11px] block">Business Address</span>
-                    <span className="text-slate-900 dark:text-white font-medium block text-xs sm:text-sm">
+                    <span className="text-zinc-400 text-[11px] block">Operating Office</span>
+                    <span className="text-white font-medium block text-xs sm:text-sm">
                       54 Roy road, Yorkshire Estate
                     </span>
-                    <span className="text-slate-500 dark:text-slate-400 text-xs block">
+                    <span className="text-zinc-400 text-xs block">
                       Cape Town, Western Cape, South Africa
                     </span>
                   </div>
@@ -181,29 +174,29 @@ export const ContactSection: React.FC = () => {
 
                 {/* Operating Scope */}
                 <div className="flex items-start gap-3 p-2">
-                  <div className="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center shrink-0 border border-slate-200 dark:border-slate-700">
+                  <div className="w-10 h-10 rounded-xl bg-[#18181c] text-[#BF953F] flex items-center justify-center shrink-0 border border-white/10">
                     <Clock className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-slate-400 text-[11px] block">Operating Scope & Turnaround</span>
-                    <span className="text-slate-900 dark:text-white font-medium block text-xs sm:text-sm">
+                    <span className="text-zinc-400 text-[11px] block">Operating Reach &amp; Turnaround</span>
+                    <span className="text-white font-medium block text-xs sm:text-sm">
                       Nationwide Across All 9 Provinces
                     </span>
-                    <span className="text-slate-500 dark:text-slate-400 text-xs block">
-                      24–48 Hours for Official SCM Quotations
+                    <span className="text-zinc-400 text-xs block">
+                      Fast Quotation Turnaround within 24–48 Hours
                     </span>
                   </div>
                 </div>
 
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 space-y-1.5">
-                <div className="flex items-center gap-2 text-xs font-bold text-emerald-700 dark:text-emerald-400">
+              <div className="p-4 rounded-2xl bg-[#141418] border border-white/5 space-y-1.5">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#BF953F]">
                   <ShieldCheck className="w-4 h-4" />
-                  <span>CSD & Tender Compliance Ready</span>
+                  <span>Compliance &amp; Quality Assured</span>
                 </div>
-                <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Tax compliant, municipal vendor database registered, and adhering to the Broad-Based Black Economic Empowerment (B-BBEE) framework.
+                <p className="text-[11px] text-zinc-400 leading-relaxed">
+                  Tax compliant, municipal vendor registered, and adhering to strict quality standards.
                 </p>
               </div>
             </div>
@@ -211,119 +204,118 @@ export const ContactSection: React.FC = () => {
 
           {/* Right: Direct Inquiry Form */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-xs space-y-5">
-              <h3 className="font-display text-lg font-bold text-slate-950 pb-2 border-b border-slate-100">
-                Send Direct Message or Brief
+            <div className="bg-[#0c0c0e] rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl space-y-5">
+              <h3 className="font-serif text-xl font-bold text-white pb-3 border-b border-white/10">
+                Send an Inquiry or Quote Request
               </h3>
 
               {submitted ? (
                 <div className="text-center py-10 space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                  <div className="w-12 h-12 rounded-full bg-[#BF953F]/10 border border-[#BF953F]/30 text-[#BF953F] flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
-                  <h4 className="font-display text-lg font-bold text-slate-950">
-                    Message Prepared
+                  <h4 className="font-serif text-xl font-bold text-white">
+                    Inquiry Prepared
                   </h4>
-                  <p className="text-xs text-slate-600 max-w-md mx-auto leading-relaxed">
-                    Click below to transmit directly via your default email client to guarantee immediate receipt by our desk.
+                  <p className="text-xs text-zinc-300 max-w-md mx-auto leading-relaxed">
+                    Click below to send directly via your email client to ensure immediate transmission to our management team.
                   </p>
 
                   <div className="flex flex-col sm:flex-row justify-center gap-3 pt-2">
                     <a
                       href={getDirectMailto()}
-                      className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-all shadow-sm"
+                      className="px-6 py-3 rounded-xl bg-[#BF953F] hover:bg-[#d4af37] text-[#0a0a0c] font-bold text-xs transition-all shadow-md"
                     >
                       Send via Email Client
                     </a>
                     <button
                       type="button"
                       onClick={() => setSubmitted(false)}
-                      className="px-4 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition-colors"
+                      className="px-4 py-3 rounded-xl bg-[#18181c] hover:bg-[#202026] text-zinc-300 font-semibold text-xs transition-colors"
                     >
-                      Edit Message
+                      Edit Details
                     </button>
                   </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {formError && (
-                    <div className="p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-medium">
+                    <div className="p-3 rounded-xl bg-rose-950/60 border border-rose-800 text-rose-300 text-xs font-medium">
                       {formError}
                     </div>
                   )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-700 block">Your Name *</label>
+                      <label className="text-xs font-semibold text-zinc-300 block">Your Name *</label>
                       <input
                         type="text"
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="e.g. Lerato Khumalo"
-                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 focus:outline-none focus:border-blue-500 focus:bg-white"
+                        placeholder="e.g. John Doe"
+                        className="w-full px-3.5 py-2.5 bg-[#141418] border border-white/10 rounded-xl text-xs text-white placeholder:text-zinc-600 focus:outline-none focus:border-[#BF953F] transition-colors"
                       />
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-700 block">Official Email *</label>
+                      <label className="text-xs font-semibold text-zinc-300 block">Email Address *</label>
                       <input
                         type="email"
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="e.g. lerato@municipality.gov.za"
-                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 focus:outline-none focus:border-blue-500 focus:bg-white"
+                        placeholder="e.g. john@company.co.za"
+                        className="w-full px-3.5 py-2.5 bg-[#141418] border border-white/10 rounded-xl text-xs text-white placeholder:text-zinc-600 focus:outline-none focus:border-[#BF953F] transition-colors"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-700 block">Organization / Entity</label>
+                      <label className="text-xs font-semibold text-zinc-300 block">Company / Organization</label>
                       <input
                         type="text"
                         value={org}
                         onChange={(e) => setOrg(e.target.value)}
-                        placeholder="e.g. Department of Infrastructure"
-                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 focus:outline-none focus:border-blue-500 focus:bg-white"
+                        placeholder="e.g. Acme Enterprises"
+                        className="w-full px-3.5 py-2.5 bg-[#141418] border border-white/10 rounded-xl text-xs text-white placeholder:text-zinc-600 focus:outline-none focus:border-[#BF953F] transition-colors"
                       />
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-xs font-semibold text-slate-700 block">Subject / Inquiry Type</label>
+                      <label className="text-xs font-semibold text-zinc-300 block">Service Needed</label>
                       <select
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
-                        className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 focus:outline-none focus:border-blue-500 focus:bg-white"
+                        className="w-full px-3.5 py-2.5 bg-[#141418] border border-white/10 rounded-xl text-xs text-white focus:outline-none focus:border-[#BF953F] transition-colors"
                       >
-                        <option value="Procurement Inquiry">Procurement / RFQ Inquiry</option>
-                        <option value="Workforce Project Partnership">Workforce & Public Project Partnership</option>
-                        <option value="Vendor Database Registration">Vendor Database Registration</option>
-                        <option value="Bulk Commodity Sourcing">Bulk Commodity Sourcing</option>
-                        <option value="Other">General Public Sector Inquiry</option>
+                        <option value="Procurement Solutions">Procurement Solutions &amp; Supplies</option>
+                        <option value="Project Management">Project Management Services</option>
+                        <option value="Both Procurement and Project Management">Both Procurement &amp; Project Management</option>
+                        <option value="General Inquiry">General Business Inquiry</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <label className="text-xs font-semibold text-slate-700 block">Message / Scope *</label>
+                    <label className="text-xs font-semibold text-zinc-300 block">Message / Scope of Requirements *</label>
                     <textarea
                       rows={4}
                       required
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Outline tender timeline, required commodities, delivery location, or questions..."
-                      className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 focus:outline-none focus:border-blue-500 focus:bg-white"
+                      placeholder="Please outline the commodities needed, delivery location, or project scope..."
+                      className="w-full px-3.5 py-2.5 bg-[#141418] border border-white/10 rounded-xl text-xs text-white placeholder:text-zinc-600 focus:outline-none focus:border-[#BF953F] transition-colors"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3 px-5 rounded-xl bg-slate-950 hover:bg-blue-600 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3.5 px-5 rounded-xl bg-[#BF953F] hover:bg-[#d4af37] text-[#0a0a0c] font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-md shadow-[#BF953F]/20 flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
                   >
-                    <span>Transmit Message</span>
-                    <Send className="w-4 h-4 text-blue-400" />
+                    <span>Send Message</span>
+                    <Send className="w-4 h-4 text-[#0a0a0c]" />
                   </button>
                 </form>
               )}
@@ -333,14 +325,14 @@ export const ContactSection: React.FC = () => {
 
         </div>
 
-        {/* Procurement FAQ Accordion */}
-        <div className="max-w-4xl mx-auto space-y-6">
+        {/* FAQs */}
+        <div className="max-w-3xl mx-auto space-y-6">
           <div className="text-center space-y-2">
-            <h3 className="font-display text-2xl font-bold text-slate-950">
-              Frequently Asked Questions (FAQ)
+            <h3 className="font-serif text-2xl font-bold text-white">
+              Frequently Asked Questions
             </h3>
-            <p className="text-xs sm:text-sm text-slate-500">
-              Key operational details for procurement officers and project directors.
+            <p className="text-xs text-zinc-400">
+              Clear answers regarding our procurement procedures and project management services.
             </p>
           </div>
 
@@ -350,20 +342,20 @@ export const ContactSection: React.FC = () => {
               return (
                 <div 
                   key={idx}
-                  className="rounded-2xl bg-white border border-slate-200/90 overflow-hidden shadow-2xs transition-all"
+                  className="rounded-2xl bg-[#0c0c0e] border border-white/10 overflow-hidden transition-all"
                 >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/60 transition-colors"
+                    className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-white/5 transition-colors"
                   >
-                    <span className="font-display font-bold text-sm text-slate-900">
+                    <span className="font-medium text-sm text-white">
                       {faq.q}
                     </span>
                     {isOpen ? (
-                      <ChevronUp className="w-4 h-4 text-blue-600 shrink-0" />
+                      <ChevronUp className="w-4 h-4 text-[#BF953F] shrink-0" />
                     ) : (
-                      <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
+                      <ChevronDown className="w-4 h-4 text-zinc-400 shrink-0" />
                     )}
                   </button>
 
@@ -373,7 +365,7 @@ export const ContactSection: React.FC = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3"
+                        className="px-5 pb-5 text-xs text-zinc-300 leading-relaxed border-t border-white/5 pt-3"
                       >
                         {faq.a}
                       </motion.div>

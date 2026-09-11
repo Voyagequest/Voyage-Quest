@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="goldFavGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5D8" />
+      <stop offset="25%" stop-color="#E5C274" />
+      <stop offset="55%" stop-color="#BF953F" />
+      <stop offset="80%" stop-color="#9E7321" />
+      <stop offset="100%" stop-color="#DDB560" />
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF953F" />
+      <stop offset="50%" stop-color="#554018" />
+      <stop offset="100%" stop-color="#BF953F" />
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="128" height="128" rx="28" fill="#09090b" stroke="url(#goldBorder)" stroke-width="2.5" />
+  <!-- Centered Logo Typography -->
+  <g id="logo-content" transform="translate(64, 64) scale(0.24) translate(-400, -190)">
+    <text x="400" y="110" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-size="96" text-anchor="middle" fill="url(#goldFavGrad)">Voyage</text>
+    <text x="400" y="258" font-family="'Playfair Display', Georgia, serif" font-weight="bold" font-size="172" text-anchor="middle" fill="url(#goldFavGrad)">Quest</text>
+    <text x="400" y="325" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="bold" font-size="24" letter-spacing="7" text-anchor="middle" fill="#BF953F">YOUR JOURNEY TO SUCCESS</text>
+  </g>
+</svg>

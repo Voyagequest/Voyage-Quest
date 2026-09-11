@@ -4,44 +4,56 @@
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
 }
 
 /* ==========================================================================
-   CSS VARIABLES FOR THEME SWITCHING (LIGHT / DARK BRAND SYSTEM)
+   CSS VARIABLES FOR VOYAGE QUEST BRAND SYSTEM (MATCHING TECH.VOYAGEQUEST.CO.ZA)
+   Obsidian Canvas (#09090b / #0d0d10) + Rich Metallic Gold (#BF953F / #D4AF37)
    ========================================================================== */
 
 :root {
-  /* Canvas & Page Backgrounds */
-  --color-bg-canvas: #f8fafc;
-  --color-bg-subtle: #f1f5f9;
+  /* Canvas & Page Backgrounds (Light mode: refined warm ivory & champagne) */
+  --color-bg-canvas: #faf8f5;
+  --color-bg-subtle: #f4f0e8;
   --color-bg-card: #ffffff;
   --color-bg-card-elevated: #ffffff;
-  --color-bg-card-subtle: #f8fafc;
-  --color-bg-card-hover: #f1f5f9;
+  --color-bg-card-subtle: #fcfbf9;
+  --color-bg-card-hover: #f7f2e7;
   --color-bg-input: #ffffff;
   --color-bg-input-focus: #ffffff;
 
   /* Typography & Text */
-  --color-text-title: #020617;
-  --color-text-heading: #0f172a;
-  --color-text-body: #334155;
-  --color-text-muted: #64748b;
-  --color-text-subtle: #94a3b8;
+  --color-text-title: #141416;
+  --color-text-heading: #1e1e24;
+  --color-text-body: #3f3f46;
+  --color-text-muted: #71717a;
+  --color-text-subtle: #a1a1aa;
   --color-text-inverse: #ffffff;
 
   /* Borders & Dividers */
-  --color-border-subtle: #e2e8f0;
-  --color-border-default: #cbd5e1;
-  --color-border-strong: #94a3b8;
+  --color-border-subtle: #e5e0d6;
+  --color-border-default: #d7cebf;
+  --color-border-strong: #BF953F;
 
-  /* Brand Accents (Voyage Quest Royal Blue) */
-  --color-brand-blue: #2563eb;
-  --color-brand-blue-hover: #1d4ed8;
-  --color-brand-blue-subtle: #eff6ff;
-  --color-brand-blue-border: #bfdbfe;
-  --color-brand-solid-btn: #0f172a;
-  --color-brand-solid-btn-hover: #2563eb;
+  /* Brand Accents (Voyage Quest Metallic Gold) */
+  --color-brand-gold: #BF953F;
+  --color-brand-gold-hover: #AA771C;
+  --color-brand-gold-light: #F3E7C4;
+  --color-brand-gold-subtle: rgba(191, 149, 63, 0.12);
+  --color-brand-gold-border: rgba(191, 149, 63, 0.35);
+  --color-brand-solid-btn: #BF953F;
+  --color-brand-solid-btn-hover: #AA771C;
+  --color-brand-solid-btn-text: #0a0a0c;
+
+  /* Backward compatibility aliases */
+  --color-brand-blue: #BF953F;
+  --color-brand-blue-hover: #AA771C;
+  --color-brand-blue-subtle: rgba(191, 149, 63, 0.12);
+  --color-brand-blue-border: rgba(191, 149, 63, 0.35);
+  --color-brand-solid-btn: #18181b;
+  --color-brand-solid-btn-hover: #BF953F;
 
   /* Status Colors */
   --color-status-success-bg: #ecfdf5;
@@ -49,8 +61,8 @@
   --color-status-success-border: #a7f3d0;
 
   /* Glass Navigation */
-  --color-nav-bg: rgba(255, 255, 255, 0.92);
-  --color-nav-border: rgba(226, 232, 240, 0.9);
+  --color-nav-bg: rgba(250, 248, 245, 0.92);
+  --color-nav-border: rgba(229, 224, 214, 0.85);
 
   /* Shadows */
   --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
@@ -58,36 +70,44 @@
 }
 
 .dark, [data-theme="dark"] {
-  /* Canvas & Page Backgrounds */
-  --color-bg-canvas: #090e1a;
-  --color-bg-subtle: #0d1527;
-  --color-bg-card: #121c2e;
-  --color-bg-card-elevated: #16243b;
-  --color-bg-card-subtle: #172338;
-  --color-bg-card-hover: #1e2c45;
-  --color-bg-input: #152238;
-  --color-bg-input-focus: #1a2a44;
+  /* Canvas & Page Backgrounds (Dark mode: Deep Obsidian Black from tech.voyagequest.co.za) */
+  --color-bg-canvas: #09090b;
+  --color-bg-subtle: #0d0d10;
+  --color-bg-card: #131316;
+  --color-bg-card-elevated: #18181c;
+  --color-bg-card-subtle: #16161a;
+  --color-bg-card-hover: #1c1c22;
+  --color-bg-input: #121215;
+  --color-bg-input-focus: #18181d;
 
   /* Typography & Text */
-  --color-text-title: #f8fafc;
-  --color-text-heading: #f1f5f9;
-  --color-text-body: #cbd5e1;
-  --color-text-muted: #94a3b8;
-  --color-text-subtle: #64748b;
-  --color-text-inverse: #090e1a;
+  --color-text-title: #fafafa;
+  --color-text-heading: #f4f4f5;
+  --color-text-body: #d4d4d8;
+  --color-text-muted: #a1a1aa;
+  --color-text-subtle: #71717a;
+  --color-text-inverse: #09090b;
 
   /* Borders & Dividers */
-  --color-border-subtle: #202f48;
-  --color-border-default: #2d4060;
-  --color-border-strong: #3e567e;
+  --color-border-subtle: rgba(255, 255, 255, 0.09);
+  --color-border-default: rgba(255, 255, 255, 0.15);
+  --color-border-strong: rgba(191, 149, 63, 0.45);
 
-  /* Brand Accents (Calibrated for Dark Backgrounds) */
-  --color-brand-blue: #3b82f6;
-  --color-brand-blue-hover: #60a5fa;
-  --color-brand-blue-subtle: rgba(59, 130, 246, 0.15);
-  --color-brand-blue-border: rgba(59, 130, 246, 0.35);
-  --color-brand-solid-btn: #2563eb;
-  --color-brand-solid-btn-hover: #1d4ed8;
+  /* Brand Accents (Voyage Quest Metallic Gold) */
+  --color-brand-gold: #BF953F;
+  --color-brand-gold-hover: #D4AF37;
+  --color-brand-gold-light: #F3E7C4;
+  --color-brand-gold-subtle: rgba(191, 149, 63, 0.15);
+  --color-brand-gold-border: rgba(191, 149, 63, 0.35);
+  --color-brand-solid-btn: #BF953F;
+  --color-brand-solid-btn-hover: #D4AF37;
+  --color-brand-solid-btn-text: #09090b;
+
+  /* Backward compatibility aliases */
+  --color-brand-blue: #BF953F;
+  --color-brand-blue-hover: #D4AF37;
+  --color-brand-blue-subtle: rgba(191, 149, 63, 0.15);
+  --color-brand-blue-border: rgba(191, 149, 63, 0.35);
 
   /* Status Colors */
   --color-status-success-bg: rgba(16, 185, 129, 0.15);
@@ -95,12 +115,12 @@
   --color-status-success-border: rgba(16, 185, 129, 0.35);
 
   /* Glass Navigation */
-  --color-nav-bg: rgba(13, 21, 38, 0.92);
-  --color-nav-border: rgba(32, 47, 72, 0.85);
+  --color-nav-bg: rgba(10, 10, 12, 0.9);
+  --color-nav-border: rgba(255, 255, 255, 0.1);
 
   /* Shadows */
-  --shadow-card: 0 4px 20px 0 rgba(0, 0, 0, 0.35);
-  --shadow-elevation: 0 20px 30px -10px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 4px 20px 0 rgba(0, 0, 0, 0.45);
+  --shadow-elevation: 0 20px 30px -10px rgba(0, 0, 0, 0.7);
 }
 
 /* ==========================================================================
@@ -117,7 +137,7 @@ body {
   color: var(--color-text-body);
 }
 
-h1, h2, h3, h4, .font-display {
+h1, h2, h3, h4, .font-display, .font-serif {
   font-family: var(--font-display);
 }
 
@@ -143,7 +163,7 @@ textarea {
 }
 
 /* ==========================================================================
-   CSS VARIABLE GRACEFUL OVERRIDES FOR DARK MODE COMPATIBILITY
+   THEME ADAPTATIONS & VOYAGE QUEST GOLD PALETTE
    ========================================================================== */
 
 .dark body {
@@ -158,7 +178,8 @@ textarea {
 
 .dark .bg-slate-50,
 .dark .bg-slate-50\/50,
-.dark .bg-slate-50\/70 {
+.dark .bg-slate-50\/70,
+.dark .bg-slate-50\/80 {
   background-color: var(--color-bg-subtle) !important;
 }
 
@@ -221,19 +242,41 @@ textarea {
   border-color: var(--color-border-subtle) !important;
 }
 
-/* Brand Blue Adaptations */
-.dark .bg-blue-50 {
-  background-color: var(--color-brand-blue-subtle) !important;
+/* Brand Blue Adaptations -> Metallic Gold */
+.dark .bg-blue-50,
+.dark .bg-blue-500\/10,
+.dark .bg-blue-950\/80,
+.dark .bg-blue-950\/60 {
+  background-color: var(--color-brand-gold-subtle) !important;
 }
 
 .dark .text-blue-700,
-.dark .text-blue-600 {
-  color: var(--color-brand-blue) !important;
+.dark .text-blue-600,
+.dark .text-blue-500,
+.dark .text-blue-400 {
+  color: var(--color-brand-gold) !important;
 }
 
+.dark .border-blue-100,
 .dark .border-blue-200,
-.dark .border-blue-200\/80 {
-  border-color: var(--color-brand-blue-border) !important;
+.dark .border-blue-200\/60,
+.dark .border-blue-200\/80,
+.dark .border-blue-500\/20,
+.dark .border-blue-800,
+.dark .border-blue-900 {
+  border-color: var(--color-brand-gold-border) !important;
+}
+
+/* Solid Brand Action Buttons */
+.dark .bg-blue-600 {
+  background-color: var(--color-brand-gold) !important;
+  color: #09090b !important;
+}
+
+.dark .hover\:bg-blue-600:hover,
+.dark .hover\:bg-blue-500:hover {
+  background-color: var(--color-brand-gold-hover) !important;
+  color: #09090b !important;
 }
 
 /* Success status badges */
@@ -263,16 +306,25 @@ textarea {
 .dark select:focus,
 .dark textarea:focus {
   background-color: var(--color-bg-input-focus) !important;
-  border-color: var(--color-brand-blue) !important;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25) !important;
+  border-color: var(--color-brand-gold) !important;
+  box-shadow: 0 0 0 2px rgba(191, 149, 63, 0.25) !important;
 }
 
-/* Hero Section Specific Grid in Dark Mode */
+/* Hero Section Specific Grid & Radial Glow in Dark Mode */
 .dark #overview {
-  background-image: linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-subtle), var(--color-bg-canvas)) !important;
+  background-color: var(--color-bg-canvas) !important;
+  background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(191, 149, 63, 0.12), transparent 70%), linear-gradient(to bottom, var(--color-bg-canvas), var(--color-bg-subtle), var(--color-bg-canvas)) !important;
 }
 
 .dark #overview .bg-\[size\:48px_48px\] {
-  opacity: 0.07 !important;
+  opacity: 0.05 !important;
   background-image: linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px) !important;
 }
+
+/* Gold Gradient Text Helper */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #BF953F 0%, #F5E5C9 50%, #B38728 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

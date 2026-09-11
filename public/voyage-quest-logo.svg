@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 150" width="340" height="150" overflow="visible">
+  <defs>
+    <linearGradient id="vGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8E1" />
+      <stop offset="35%" stop-color="#ECD085" />
+      <stop offset="70%" stop-color="#C5993B" />
+      <stop offset="100%" stop-color="#9C701E" />
+    </linearGradient>
+    <linearGradient id="qGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF5" />
+      <stop offset="20%" stop-color="#FCE493" />
+      <stop offset="45%" stop-color="#E2B444" />
+      <stop offset="72%" stop-color="#BA8C33" />
+      <stop offset="100%" stop-color="#7C550E" />
+    </linearGradient>
+  </defs>
+  <text x="170" y="44" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="italic" font-weight="500" font-size="42" fill="url(#vGold)">Voyage</text>
+  <text x="170" y="104" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="normal" font-weight="700" font-size="76" letter-spacing="-1.5" fill="url(#qGold)">Quest</text>
+  <text x="171.5" y="142" text-anchor="middle" font-family="Plus Jakarta Sans, system-ui, sans-serif" font-weight="700" font-size="11.5" letter-spacing="3.8" fill="#D4AF37">YOUR JOURNEY TO SUCCESS</text>
+</svg>

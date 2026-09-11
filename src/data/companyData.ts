@@ -18,8 +18,8 @@ export const COMPANY_PROFILE = {
     country: "South Africa"
   },
   operatingScope: "Nationwide Across South Africa (All 9 Provinces)",
-  slogan: "your journey to success",
-  logoUrl: "/voyage-quest-logo.jpg",
+  slogan: "YOUR JOURNEY TO SUCCESS",
+  logoUrl: "/voyage-quest-logo.png",
   tagline: "Agile Sourcing, Project Leadership & Public Sector Delivery",
   executiveSummary: "Voyage Quest is a dynamic, multi-sector enterprise dedicated to providing high-quality commercial goods, specialized project management, and capacity-building services across South Africa. We specialize in seamless sourcing and delivery of essential daily operational supplies, personal protective equipment (PPE), sanitation products, and enterprise IT infrastructure, alongside end-to-end management and facilitation of public sector initiatives, including community public works and public employment projects. By combining robust supply chain capabilities with hands-on project leadership, Voyage Quest acts as an agile, single-source partner. Our framework scales efficiently to support municipal tenders, corporate entities, government departments, and community development initiatives.",
   vision: "To become a premier, multi-commodity supply and project management partner recognized across South Africa for operational excellence, competitive pricing, structured project execution, and unyielding reliability.",

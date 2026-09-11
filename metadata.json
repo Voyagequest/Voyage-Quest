@@ -1,6 +1,6 @@
 {
   "name": "Voyage Quest Website",
-  "description": "Multi-sector procurement, supply chain solutions, public works project management, and enterprise equipment partner across South Africa.",
+  "description": "Procurement and Project Management solutions across South Africa. Commercial sourcing, certified PPE, hygiene supplies, and disciplined project oversight.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
