@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Install project dependencies
 COPY package*.json ./
-RUN npm ci
+RUN if [ -f package-lock.json ]; then npm ci || npm install; else npm install; fi
 
 # Copy project files and compile production build
 COPY . .
@@ -24,7 +24,7 @@ ENV NODE_ENV=production
 
 # Install only production dependencies
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN if [ -f package-lock.json ]; then npm ci --omit=dev || npm install --omit=dev; else npm install --omit=dev; fi
 
 # Copy compiled static assets from builder
 COPY --from=builder /app/dist ./dist
