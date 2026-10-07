@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Direct links to sitemap
-Sitemap: https://tech.voyagequest.co.za/sitemap.xml
+Sitemap: https://voyagequest.co.za/sitemap.xml
